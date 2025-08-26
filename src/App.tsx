@@ -1,9 +1,17 @@
-export function App() {
-  console.log("Oi");
+import "./styles/theme.css";
+import "./styles/global.css";
+import { Heading } from "./components/Heading";
+import { TimerIcon } from "lucide-react";
 
+export function App() {
   return (
     <div>
-      <h1>Olá Mundo!</h1>
+      <Heading>
+        Olá mundo 1
+        <button>
+          <TimerIcon />
+        </button>
+      </Heading>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti saepe
         sunt labore cum. Repellat voluptas, nihil iste repudiandae ab porro
