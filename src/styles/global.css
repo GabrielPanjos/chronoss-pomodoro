@@ -16,14 +16,4 @@ body {
   color: var(--text-default);
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-}
 
-.content {
-  display: flex;
-  justify-content: center;
-  max-width: 980px;
-  margin: 32px;
-}
