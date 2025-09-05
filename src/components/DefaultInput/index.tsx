@@ -1,18 +1,18 @@
 import { Label } from "./Label";
 import styles from "./styles.module.css";
 
-type InputProps = {
+type DefaultInputProps = {
   id: string;
   labelText?: string;
   placeholder?: string;
 } & React.ComponentProps<"input">;
 
-export function Input({
+export function DefaultInput({
   labelText,
   type,
   id,
   ...rest
-}: InputProps) {
+}: DefaultInputProps) {
   return (
     <>
       {labelText && <Label htmlFor={id}>{labelText}</Label>}
