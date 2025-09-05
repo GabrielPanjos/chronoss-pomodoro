@@ -2,10 +2,8 @@ import { HistoryIcon, HouseIcon, SettingsIcon, SunIcon } from "lucide-react";
 import styles from "./styles.module.css";
 import { useEffect, useState } from "react";
 
-type AvailableThemes = "dark" | "light";
-
 export function Menu() {
-  const [theme, setTheme] = useState<AvailableThemes>("dark");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   function changeTheme(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     e.preventDefault();
@@ -15,6 +13,7 @@ export function Menu() {
   }
 
   useEffect(() => {
+    localStorage.setItem("theme", theme);
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
